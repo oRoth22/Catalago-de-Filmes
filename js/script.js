@@ -1,7 +1,7 @@
 let inputBuscarFilme = document.querySelector("#pesquisa");
 let btnBuscarFilme = document.querySelector("#btnBuscar");
 
-btnBuscarFilme.onclick = async () => {
+btnBuscarFilme.onclick = () => {
     if(inputBuscarFilme.value.length > 0){
         let filmes = new Array();
         fetch("http://www.omdbapi.com/?apikey=b62f1253&s="+inputBuscarFilme.value, {mode: "cors"})
@@ -24,8 +24,19 @@ btnBuscarFilme.onclick = async () => {
                 );
                 filmes.push(filme);
             });
+            listarFilmes(filmes);
         })
     }       
 return false;
 }
 
+let listarFilmes = async (filmes) =>{
+    let listaFilmes = await document.querySelector("#lista-filme");
+    listaFilmes.innerHTML = "";
+    console.log(listaFilmes);
+    if(filmes.length > 0) {
+        filmes.forEach(async(filme) => {
+          listaFilmes.appendChild(await filme.getCard());  
+        });
+    }
+} 

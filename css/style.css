@@ -79,7 +79,6 @@ select.form-select{
 #pesquisa{
     position: relative;
     left: 65%;
-    margin: auto;
     bottom: 150%;
     width: 17%;
     height: 30%;
@@ -128,4 +127,37 @@ p{
     flex-wrap: wrap;
     padding: 2rem;
 
+}
+
+img.card-img-top{
+    height: 85%;
+    width: 100%;
+}
+
+.card{
+    width: 20%;
+    height: 60%;
+    float: left;
+    margin-top: 20px;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-bottom: 70px;
+}
+
+#lista-filme{
+    position: relative;
+    padding-left: 5% ;
+    float: left;
+}
+
+.card-body{
+    height: 1%;
+    padding: 0;
+}
+
+h5.card-title{
+    left: 5%;
+    height: 59%;
+    padding: none;
+    margin: none;
 }
