@@ -33,10 +33,25 @@ return false;
 let listarFilmes = async (filmes) =>{
     let listaFilmes = await document.querySelector("#lista-filme");
     listaFilmes.innerHTML = "";
-    console.log(listaFilmes);
+    //console.log(listaFilmes);
     if(filmes.length > 0) {
         filmes.forEach(async(filme) => {
-          listaFilmes.appendChild(await filme.getCard());  
+            console.log(filme);
+          listaFilmes.appendChild(await filme.getCard()); 
+          filme.getBtnDetalhes().onclick=()=>{
+            detalhesFilme(filme.id);
+          } 
         });
     }
 } 
+
+let detalhesFilme = async (id)=>{
+    fetch("http://www.omdbapi.com/?apikey=b62f1253&i="+id)
+    .then((resp)=> resp.json())
+    .then((resp)=> {
+        console.log(resp)
+
+        
+        
+    })
+ }

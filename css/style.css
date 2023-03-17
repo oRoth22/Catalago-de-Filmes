@@ -1,8 +1,6 @@
 *{
     margin: 0;
     padding: 0;
-    height: 100%;
-    width: 100%;
 }
 
 .header{
@@ -15,10 +13,8 @@ body{
     background-color: #1b1b1b;
 }
 
-#logo{
-    background-color: #ffff;
-    height: 96%;
-    width: 10%;
+img#logo{
+    width: 6%;
     left: 0.5%;
     top: 4%;
     position: relative;
@@ -97,7 +93,7 @@ select.form-select{
 .d-flex{
     position: relative !important;
     height: 30% !important;
-    width: 6% !important;
+    width: 3.9% !important;
     bottom: 180% !important;
     left: 90% !important;
     background-color: #fff !important;
@@ -117,10 +113,6 @@ select.form-select{
     top: 5%;
 }
 
-p{
-    flex-grow: 1;
-}
-
 #filmes{
     display: flex;
     justify-content: space-around;
@@ -135,8 +127,8 @@ img.card-img-top{
 }
 
 .card{
-    width: 20%;
-    height: 60%;
+    width: 20vw;
+    height: 70vh;
     float: left;
     margin-top: 20px;
     margin-left: 30px;
@@ -146,18 +138,26 @@ img.card-img-top{
 
 #lista-filme{
     position: relative;
-    padding-left: 5% ;
+    display: flex;
+    padding-left: 3%;
     float: left;
+    flex-wrap: wrap;
 }
 
 .card-body{
-    height: 1%;
+    height: 17vh;
     padding: 0;
 }
 
 h5.card-title{
-    left: 5%;
-    height: 59%;
+    height: 4vh;
     padding: none;
     margin: none;
+}
+
+.btnDetalhesFilme{
+    margin-bottom: 10%;
+    background-color: #fff;
+    top:10%;
+    width: 6vw;
 }
