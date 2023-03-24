@@ -173,15 +173,43 @@ h5.card-title{
     position: relative;
     left: 27vw;
     width: 50vw;
-    bottom: 70vh;
-    height: 70vh;
+    bottom: 74vh;
+    height: 72vh;
 }
 
 h2.informacao{
     margin-left: 1vw ;
+    margin-top: 2vh;
 }
 
 h4.informacao{
-    margin-top: 5.5vh;
+    margin-top: 4vh;
     margin-left: 1vw ;
+}
+
+.divFav{
+    position: relative;
+    bottom: 2vh;
+}
+
+#btnsalvar{
+    margin-top: 3vh;
+    margin-right: 1vw;
+    margin-left: 2vw ;
+    height: 4vh;
+    width: 8vw;
+    background-color: #fff;
+    border-color:  #1b1b1b;
+    border-radius: 5px;
+}
+
+#btnFechar{
+    margin-top: 3vh;
+    margin-right: 1vw;
+    margin-left: 2vw ;
+    height: 4vh;
+    width: 8vw;
+    background-color: #fff;
+    border-color:  #1b1b1b;
+    border-radius: 5px;
 }

@@ -44,20 +44,33 @@ let detalheFilme = async (id)=>{
             resp.Genre.split(","),
             resp.Runtime,
             resp.Poster,
-            resp.plot,
+            resp.Plot,
             resp.Director,
             resp.Actors.split(","),
             resp.Awards,
             resp.imdbRating
-
         )
         
     let listaFilmes = document.querySelector("#lista-filme");
     let detalhes = document.querySelector("#mostrar-filme");
     detalhes.innerHTML = "";
     listaFilmes.innerHTML = "";
-
     detalhes.appendChild(filme.getCardDetalhes());
+
+    document.querySelector("#btnFechar").onclick = () => {
+        document.querySelector("#lista-filme").style.display = "flex";
+        document.querySelector("#mostrar-filme").innerHTML="";
+        document.querySelector("#mostrar-filme").style.display="none";
+    }
+
+    document.querySelector("#btnSalvar").onclick = () => {
+        function salvarFilme(filme){
+            let filmesString = localStorage.getItem("filmesFvoritos");
+            var filmes = JSON.parse(filmesString);
+        }
+    }
+    document.querySelector("#lista-filme").style.display = "none";
+    document.querySelector("#mostrar-filme").style.display = "flex";
 
     });
    return false;

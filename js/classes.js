@@ -19,8 +19,8 @@ class Filme{
         this.ano=ano;
         this.genero=genero;
         this.duracao=duracao;
-        this.sinopse=sinopse;
         this.cartaz=cartaz;
+        this.sinopse=sinopse;
         this.direcao=direcao;
         this.elenco=elenco;
         this.classificacao=classificacao;
@@ -88,6 +88,16 @@ class Filme{
         let divDetalhes = document.createElement("div");
         divDetalhes.setAttribute("style","display:flex; justify-content:space-aroud;");
 
+
+        let btnSalvar = document.createElement("button");
+        btnSalvar.appendChild(document.createTextNode("Favoritar"));
+        btnSalvar.setAttribute("id","btnsalvar");
+
+        let btnFechar = document.createElement("button");
+        btnFechar.appendChild(document.createTextNode("Fechar"));
+        btnFechar.setAttribute("id", "btnFechar");
+        
+
         let titulo = document.createElement("h2");
         titulo.setAttribute("class", "informacao");
         titulo.appendChild(document.createTextNode("Nome: "+this.titulo));
@@ -123,10 +133,10 @@ class Filme{
         cardBody.appendChild(avaliacao);
         card.appendChild(imgCartaz);
         card.appendChild(cardBody);
-
+        cardBody.appendChild(btnSalvar);
+        cardBody.appendChild(btnFechar);
         
         
-
         return card;
  }
 }
