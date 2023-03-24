@@ -161,3 +161,27 @@ h5.card-title{
     top:10%;
     width: 6vw;
 }
+
+.card2{
+    width: 25vw;
+    margin-top: 3%;
+    margin-left: 12%;
+}
+
+.card-body2{
+    background-color: #fff;
+    position: relative;
+    left: 27vw;
+    width: 50vw;
+    bottom: 70vh;
+    height: 70vh;
+}
+
+h2.informacao{
+    margin-left: 1vw ;
+}
+
+h4.informacao{
+    margin-top: 5.5vh;
+    margin-left: 1vw ;
+}

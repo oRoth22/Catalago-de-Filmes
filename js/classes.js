@@ -75,6 +75,58 @@ class Filme{
         return this.btnDetalhes
     }
 
+    getCardDetalhes = ()=>{
+        let card = document.createElement("div");
+        card.setAttribute("class","card2");
+        let imgCartaz = document.createElement("img");
+        imgCartaz.setAttribute("class", "card-img-top");
+        imgCartaz.setAttribute("src",this.cartaz);
+        let cardBody = document.createElement("div");
+        cardBody.setAttribute("class","card-body2");
+        let hCardTitle = document.createElement("h5");
+        hCardTitle.setAttribute("class","card-title");
+        let divDetalhes = document.createElement("div");
+        divDetalhes.setAttribute("style","display:flex; justify-content:space-aroud;");
 
+        let titulo = document.createElement("h2");
+        titulo.setAttribute("class", "informacao");
+        titulo.appendChild(document.createTextNode("Nome: "+this.titulo));
+        let resumo = document.createElement("h4");
+        resumo.setAttribute("class","informacao");
+        resumo.appendChild(document.createTextNode("Resumo: "+this.sinopse));
+        let genero = document.createElement("h4");
+        genero.setAttribute("class","informacao");
+        genero.appendChild(document.createTextNode("Gênero: "+this.genero));
+        let duracao = document.createElement("h4");
+        duracao.setAttribute("class","informacao");
+        duracao.appendChild(document.createTextNode("Duração: "+this.duracao));
+        let ano = document.createElement("h4");
+        ano.setAttribute("class","informacao");
+        ano.appendChild(document.createTextNode("Ano de lançamento: "+this.ano));
+        let atores = document.createElement("h4");
+        atores.setAttribute("class","informacao");
+        atores.appendChild(document.createTextNode("Atores: "+this.elenco));
+        let elenco = document.createElement("h4");
+        elenco.setAttribute("class","informacao");
+        elenco.appendChild(document.createTextNode("Diretores: "+this.direcao));
+        let avaliacao = document.createElement("h4");
+        avaliacao.setAttribute("class","informacao");
+        avaliacao.appendChild(document.createTextNode("Avaliação: "+this.avaliacao));
+
+        cardBody.appendChild(titulo);
+        cardBody.appendChild(resumo);
+        cardBody.appendChild(genero);
+        cardBody.appendChild(duracao);
+        cardBody.appendChild(ano);
+        cardBody.appendChild(atores);
+        cardBody.appendChild(elenco);
+        cardBody.appendChild(avaliacao);
+        card.appendChild(imgCartaz);
+        card.appendChild(cardBody);
+
+        
+        
+
+        return card;
  }
-
+}
