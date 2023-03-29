@@ -64,13 +64,17 @@ let detalheFilme = async (id)=>{
     }
 
     document.querySelector("#btnSalvar").onclick = () => {
-        function salvarFilme(filme){
-            let filmesString = localStorage.getItem("filmesFvoritos");
-            var filmes = JSON.parse(filmesString);
-        }
+        let filmesString = localStorage.getItem("filmesFavoritos");
+        let filmes = [];
     }
-    document.querySelector("#lista-filme").style.display = "none";
-    document.querySelector("#mostrar-filme").style.display = "flex";
+
+    if (filmesString){
+        filme = JSON.parse(filmesString);
+    }
+
+    filme.push(filme);
+
+    localStorage.setItem("filmesFavoritos",JSON.stringify(filme));
 
     });
    return false;
@@ -91,3 +95,30 @@ let detalheFilme = async (id)=>{
         });
     }
 } 
+
+function ListaFavoritos(){
+    const FilmesFavoritados = JSON.parse(localStorage.getItem("filmesFavoritos"));
+    const filmesfav = [];
+
+    FilmesFavoritados.forEach((item) => {
+        const filme = new Filme(
+            item.id,
+            item.titulo,
+            item.ano,
+            item.genero,
+            null,
+            null,
+            item.cartaz,
+            null,
+            null,
+            item.classi,
+            null
+        );
+        FilmesFavoritados.push(filme);
+    });
+    listarFilmes(FilmesFavoritados);
+}
+
+ListaFavoritos.onclick = () => {
+    ListaFavoritos();
+}
