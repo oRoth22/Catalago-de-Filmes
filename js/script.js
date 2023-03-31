@@ -1,5 +1,6 @@
 let inputBuscarFilme = document.querySelector("#pesquisa");
 let btnBuscarFilme = document.querySelector("#btnBuscar");
+let navFavoritos = document.querySelector("#favoritos");
 
 btnBuscarFilme.onclick = () => {
     if(inputBuscarFilme.value.length > 0){
@@ -60,21 +61,21 @@ let detalheFilme = async (id)=>{
     document.querySelector("#btnFechar").onclick = () => {
         document.querySelector("#lista-filme").style.display = "flex";
         document.querySelector("#mostrar-filme").innerHTML="";
-        document.querySelector("#mostrar-filme").style.display="none";
+        document.querySelector("#mostrar-filme").style.display="flex";
     }
 
     document.querySelector("#btnSalvar").onclick = () => {
         let filmesString = localStorage.getItem("filmesFavoritos");
         let filmes = [];
+
+        if (filmesString){
+        filmes = JSON.parse(filmesString);
     }
 
-    if (filmesString){
-        filme = JSON.parse(filmesString);
-    }
-
-    filme.push(filme);
+    filmes.push(filme);
 
     localStorage.setItem("filmesFavoritos",JSON.stringify(filme));
+    }
 
     });
    return false;
@@ -96,29 +97,33 @@ let detalheFilme = async (id)=>{
     }
 } 
 
-function ListaFavoritos(){
-    const FilmesFavoritados = JSON.parse(localStorage.getItem("filmesFavoritos"));
-    const filmesfav = [];
+let listarFavoritos = () => {
+    
+    const filmesFav = localStorage.getItem('filmesFav');
+    filmesFav = JSON.parse(filmesFav);
+    let filmes = new Array();
 
-    FilmesFavoritados.forEach((item) => {
-        const filme = new Filme(
-            item.id,
-            item.titulo,
-            item.ano,
-            item.genero,
-            null,
-            null,
-            item.cartaz,
-            null,
-            null,
-            item.classi,
-            null
-        );
-        FilmesFavoritados.push(filme);
-    });
-    listarFilmes(FilmesFavoritados);
+    filmesFav.forEach((item) => {
+      const filme = new Filme(
+      item.id,
+      item.titulo,
+      item.ano,  
+      item.genero,
+      null,
+      null,
+      item.cartaz,
+      null,
+      null,
+      item.classi,
+      null
+  );
+      filmes.push(filme);
+  });
+
+  listarFilmes(filmesFavoritos);
 }
 
-ListaFavoritos.onclick = () => {
-    ListaFavoritos();
+navFavoritos.onclick = () => {
+    listarFavoritos();
 }
+

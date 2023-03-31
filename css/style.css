@@ -93,7 +93,7 @@ select.form-select{
 .d-flex{
     position: relative !important;
     height: 30% !important;
-    width: 3.9% !important;
+    width: 5% !important;
     bottom: 180% !important;
     left: 90% !important;
     background-color: #fff !important;
@@ -124,6 +124,10 @@ select.form-select{
 img.card-img-top{
     height: 85%;
     width: 100%;
+}
+
+#btnBuscar{
+    width: 110%;
 }
 
 .card{
