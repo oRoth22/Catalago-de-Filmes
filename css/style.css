@@ -207,7 +207,18 @@ h4.informacao{
     border-radius: 5px;
 }
 
-#btnFechar{
+#btnfechar{
+    margin-top: 3vh;
+    margin-right: 1vw;
+    margin-left: 2vw ;
+    height: 4vh;
+    width: 8vw;
+    background-color: #fff;
+    border-color:  #1b1b1b;
+    border-radius: 5px;
+}
+
+#btndesfavoritar{
     margin-top: 3vh;
     margin-right: 1vw;
     margin-left: 2vw ;

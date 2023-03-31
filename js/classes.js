@@ -95,7 +95,11 @@ class Filme{
 
         let btnFechar = document.createElement("button");
         btnFechar.appendChild(document.createTextNode("Fechar"));
-        btnFechar.setAttribute("id", "btnFechar");
+        btnFechar.setAttribute("id", "btnfechar");
+
+        let btnDesfavoritar = document.createElement("button");
+        btnDesfavoritar.appendChild(document.createTextNode("Desfavoritar"));
+        btnDesfavoritar.setAttribute("id","btndesfavoritar");
         
 
         let titulo = document.createElement("h2");
@@ -135,6 +139,7 @@ class Filme{
         card.appendChild(cardBody);
         cardBody.appendChild(btnSalvar);
         cardBody.appendChild(btnFechar);
+        cardBody.appendChild(btnDesfavoritar);
         
         
         return card;
