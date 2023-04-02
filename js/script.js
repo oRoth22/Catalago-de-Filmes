@@ -5,7 +5,7 @@ let navFavoritos = document.querySelector("#favoritos");
 btnBuscarFilme.onclick = () => {
     if(inputBuscarFilme.value.length > 0){
         let filmes = new Array();
-        fetch("http://www.omdbapi.com/?apikey=b62f1253&s="+inputBuscarFilme.value, {mode: "cors"})
+        fetch("https://www.omdbapi.com/?apikey=b62f1253&s="+inputBuscarFilme.value, {mode: "cors"})
         .then((resp)=> resp.json())
         .then((resp)=> {
             resp.Search.forEach((item)=>{
@@ -33,7 +33,7 @@ return false;
 
 
 let detalheFilme = async (id)=>{
-    fetch("http://www.omdbapi.com/?apikey=b62f1253&i="+id)
+    fetch("https://www.omdbapi.com/?apikey=b62f1253&i="+id)
     .then((resp)=> resp.json())
     .then((resp)=> {
         console.log(resp)
