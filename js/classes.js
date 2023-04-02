@@ -41,10 +41,13 @@ class Filme{
         let divDetalhes = document.createElement("div");
         divDetalhes.setAttribute("style","display:flex; justify-content:space-aroud;");
         let divGenero = document.createElement("div");
+        divGenero.setAttribute("class", "notasinfo");
         divGenero.setAttribute("style","flex-grow:1;");
         let divAnoProducao = document.createElement("div");
+        divAnoProducao.setAttribute("class", "notasinfo");
         divAnoProducao.setAttribute("style","flex-grow:1;");
         let divClassificacao = document.createElement("div");
+        divClassificacao.setAttribute("class", "notasinfo");
         divClassificacao.setAttribute("style", "flex-grow:1;");
         hCardTitle.appendChild(document.createTextNode(this.titulo));
         divGenero.appendChild(document.createTextNode(this.genero));
@@ -100,7 +103,11 @@ class Filme{
         let btnDesfavoritar = document.createElement("button");
         btnDesfavoritar.appendChild(document.createTextNode("Desfavoritar"));
         btnDesfavoritar.setAttribute("id","btndesfavoritar");
-        
+
+        let btnEditar = document.createElement("button");
+        btnEditar.appendChild(document.createTextNode("Editar"));
+        btnEditar.setAttribute("id","btneditar");
+
 
         let titulo = document.createElement("h2");
         titulo.setAttribute("class", "informacao");
@@ -140,8 +147,57 @@ class Filme{
         cardBody.appendChild(btnSalvar);
         cardBody.appendChild(btnFechar);
         cardBody.appendChild(btnDesfavoritar);
-        
+        cardBody.appendChild(btnEditar);
         
         return card;
  }
+
+    getCardEditar = () => {
+
+        let card = document.createElement("div");
+        card.setAttribute("class","card2");
+        let imgCartaz = document.createElement("img");
+        imgCartaz.setAttribute("class", "card-img-top");
+        imgCartaz.setAttribute("src",this.cartaz);
+        let cardBody = document.createElement("div");
+        cardBody.setAttribute("class","card-body2");
+        let hCardTitle = document.createElement("h5");
+        hCardTitle.setAttribute("class","card-title");
+        let divDetalhes = document.createElement("div");
+        divDetalhes.setAttribute("style","display:flex; justify-content:space-aroud;");
+
+        let titulo = document.createElement("h4");
+        titulo.appendChild(document.createTextNode("Título"));
+        titulo.setAttribute("class", "informacao");
+
+        let inputTitulo = document.createElement("input");
+        inputTitulo.setAttribute("class", "inputTit");
+
+        let resumo = document.createElement("h4");
+        resumo.appendChild(document.createTextNode("Sinopse"));
+        resumo.setAttribute("class", "informacao");
+
+        let inputSinopse = document.createElement("input");
+        inputSinopse.setAttribute("class", "inputSinop");
+
+        let SalvaAlter = document.createElement("button");
+        SalvaAlter.appendChild(document.createTextNode("Salvar"));
+        SalvaAlter.setAttribute("id","btnSalvarAlter");
+
+        let FecharAlter = document.createElement("button");
+        FecharAlter.appendChild(document.createTextNode("Fechar"));
+        FecharAlter.setAttribute("id", "btnFecharAlter");
+
+        card.appendChild(imgCartaz);
+        card.appendChild(cardBody);
+        cardBody.appendChild(titulo);
+        cardBody.appendChild(inputTitulo);
+        cardBody.appendChild(resumo);
+        cardBody.appendChild(inputSinopse);
+        cardBody.appendChild(SalvaAlter);
+        cardBody.appendChild(FecharAlter);
+        
+        return card;
+ }
+
 }

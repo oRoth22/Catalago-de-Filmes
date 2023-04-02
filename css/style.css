@@ -37,14 +37,14 @@ img#logo{
 
 #favoritos{
     position: relative;
-    left: 43vw;
+    left: 38vw;
     bottom: 9vh;
     height: 7vh;
     width: 6vw;
     border: 0;
     background-color: #cdff00;
     color: #000000;
-    font-size: 4vh;
+    font-size: 5vh;
     margin: auto;
     user-select: none;
     cursor: pointer;
@@ -119,6 +119,10 @@ img.card-img-top{
     margin-bottom: 70px;
 }
 
+.notasinfo{
+    text-align: center;
+}
+
 #lista-filme{
     position: relative;
     display: flex;
@@ -130,19 +134,25 @@ img.card-img-top{
 .card-body{
     height: 17vh;
     padding: 0;
+    border: #fff;
+    background-color: #2b2b2b;
+    color: #fff;
 }
 
 h5.card-title{
     height: 4vh;
     padding: none;
+    text-align: center;
     margin: none;
 }
 
 .btnDetalhesFilme{
     background-color: #fff;
     margin-bottom: 1vh;
-    top:10%;
-    width: 6vw;
+    top: 10%;
+    width: 8vw;
+    position: relative;
+    left: 5.5vw;
 }
 
 .card2{
@@ -153,7 +163,8 @@ h5.card-title{
 }
 
 .card-body2{
-    background-color: #fff;
+    background-color: #1b1b1b;
+    color: #fff;
     position: relative;
     left: 27vw;
     width: 50vw;
@@ -162,6 +173,7 @@ h5.card-title{
 }
 
 h2.informacao{
+    color: #fff;
     margin-left: 1vw ;
     margin-top: 2vh;
 }
@@ -171,9 +183,60 @@ h4.informacao{
     margin-left: 1vw ;
 }
 
+.inputTit{
+    width: 30vw;
+    height: 4vh;
+    border-radius: 10px;
+}
+
+.inputSinop{
+    width: 30vw;
+    height: 4vh;
+    border-radius: 10px;
+}
+
+.inputduracao{
+    width: 30vw;
+    height: 4vh;
+    border-radius: 10px;
+}
+
+#btnSalvarAlter{
+    position: relative;
+    height: 4vh;
+    width: 8vw;
+    border-color:  #1b1b1b;
+    border-radius: 5px;
+    top: 12vh;
+    right: 30vw;
+    color: #000000;
+}
+
+#btnFecharAlter{
+    position: relative;
+    height: 4vh;
+    width: 8vw;
+    background-color: #fff;
+    border-color:  #1b1b1b;
+    border-radius: 5px;
+    top: 12vh;
+    right: 28vw;
+}
+
 .divFav{
     position: relative;
     bottom: 2vh;
+}
+
+#TENTEII{
+    position: relative;
+    height: 4vh;
+    width: 8vw;
+    background-color: #fff;
+    border-color:  #1b1b1b;
+    border-radius: 5px;
+    top: 46vh;
+    right: -2vw;
 }
 
 #btnsalvar{
@@ -209,11 +272,24 @@ h4.informacao{
     border-radius: 5px;
 }
 
+#btneditar{
+    margin-top: 3vh;
+    margin-right: 1vw;
+    margin-left: 2vw ;
+    height: 4vh;
+    width: 8vw;
+    background-color: #fff;
+    border-color:  #1b1b1b;
+    border-radius: 5px;
+}
+
+
+
 @media only screen and (max-width: 392px)
 {
     .header{
         background-color: #cdff00;
-        width: 109%;
+        width: 102%;
         height: 12vh;
     }  
 
@@ -225,6 +301,48 @@ h4.informacao{
         position: relative;
     }
 
+    #favoritos{
+        position: relative;
+        left: 28vw;
+        bottom: 9vh;
+        height: 7vh;
+        width: 6vw;
+        border: 0;
+        background-color: #cdff00;
+        color: #000000;
+        font-size: 3vh;
+        margin: auto;
+        user-select: none;
+        cursor: pointer;
+    }
+
+    #pesquisa{
+        position: relative;
+        left: 51vw;
+        bottom: 9.5vh;
+        width: 23vw;
+        height: 4vh;
+        border: solid 1.5px #1b1b1b;
+        border-radius: 10px;
+        background-color: #fff;
+        padding-left: 10px;
+        outline: 0;
+    }
+    
+    #pesquisa::placeholder{
+        position: relative;
+        left: 10px;
+        font-size: 1.7vh;
+    }
+
+    .d-flex{
+        position: relative !important;
+        height: 4vh !important;
+        width: 17vw !important;
+        bottom: 14.4vh !important;
+        left: 83vw !important;
+        background-color: #fff !important;
+    }
 
     .card-foto{
         width: 40rem;
@@ -244,7 +362,7 @@ h4.informacao{
     }
 
     #btnBuscar{
-        width: 10vw;
+        width: 17vw;
     }
 
     .btnDetalhesFilme{
@@ -258,10 +376,11 @@ h4.informacao{
     }
 
     .card-body2 {
-        background-color: #fff;
+        background-color: #1b1b1b;
+        color: #fff;
         position: relative;
         left: 1vw;
-        width: 96vw;
+        width: 95vw;
         top: 2vh;
         height: 87vh;
     }
